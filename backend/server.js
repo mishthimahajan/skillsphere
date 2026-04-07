@@ -20,7 +20,18 @@ const session = require("express-session");
 
 const app = express();
 
+const mongoose = require("mongoose");
 
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch((err) => {
+    console.log("Mongo Error ❌", err);
+    process.exit(1);
+  });
+
+app.get("/", (req, res) => {
+  res.send("SkillSphere API Running 🚀");
+});
 app.use(express.json());
 
 app.use(
