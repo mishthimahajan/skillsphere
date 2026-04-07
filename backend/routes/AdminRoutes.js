@@ -1,13 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const {
-  getUsers,
-  getJobs,
-  getPayments
-} = require("../controllers/adminController");
+const { getUsers, getJobs, getPayments } = require("../controllers/AdminController");
 
-// ✅ IMPORTANT: all must be FUNCTIONS
 router.get("/users", getUsers);
 router.get("/gigs", getJobs);
 router.get("/payments", getPayments);
