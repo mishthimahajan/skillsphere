@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Features from "../components/Features";
+// import Features from "../components/Features";
 import HowItWorks from "../components/HowItWorks";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-linear-to-br from-indigo-600 via-purple-600 to-blue-500 text-white">
       <Navbar />
       <Hero />
-      <Features />
+      
       <HowItWorks />
       <Services />
       <Testimonials />
