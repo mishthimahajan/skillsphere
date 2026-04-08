@@ -54,7 +54,7 @@ const protect = require("../middleware/authMiddleware");
 
 router.post("/register", register);
 router.post("/login", login);
-router.post("/set-role", setRole);
+router.post("/set-role",protect, setRole);
 router.get("/me", protect, getMe);
 
 
